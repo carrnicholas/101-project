@@ -1,0 +1,241 @@
+/* See notes at bottom of code base */
+
+/* BASE STYLES */
+
+/* sets background color and base font for the page */
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #2b2b2b;
+}
+
+/* GRID STYLE (also known as BASE STYLES, part II) */
+
+/* Note: the first time I did this my grid did not work! Trying to identify
+the problem...posted code on Slack to find out! */
+
+.full-width {
+  width: 1200px;
+  margin: 0 auto; /* takes up full width of page,,,0 means 0px top and bottom */
+  /* the auto means the margin for the side is set automatically */
+  overflow: auto; /* this makes the floats clear automatically */
+}
+
+.half-width {
+  width: 600px;
+  float: left; /* floating divs inside divs */
+}
+
+.third-width {
+  width: 400px;
+  float: left; /* floating divs inside more divs! */
+}
+
+/* HEADER SECTION */
+
+/* This section is pretty complicated...see long note at bottom! */
+
+header {
+  height: 800px;
+  background: url('../img/hero.png'); /* see below...involves the command line */
+  background-size: cover; /* what does cover mean? */
+  background-position: center;
+}
+
+header h1 {
+  padding: 65px 0 65px 25px; /* see note at bottom on syntax */
+  font-family: 'Lora', serif; /* link to Lora font, thought I already did this */
+  color: #bbc085;
+  font-size: 30px;
+}
+
+nav {
+  float right; /* forcing the nav bar itself to float right */
+  padding: 75px 25px;
+}
+
+nav ul li {
+  display: inline-block; /* specifying what the list item display is */
+  /* originally messed this up and put a space between inline and block */
+}
+
+nav ul li a {
+  text-transform: uppercase; /* guessed...where to find? Guessed: small caps */
+  text-decoration: none; /* guessed...where to find? Guessed: underline*/
+  font-size: 18px;
+  color: #828282;
+  padding-left: 80px; /* This is where the spacing between links comes from */
+}
+
+header h2 {
+width: 1000px; /* No idea how I was supposed to deduce this from the annotated
+image from Skillcrush... */
+clear: both; /* I knew to use this, but why??? I don't know... */
+font-family: 'Lora', serif;
+color: #2b2b2b;
+font-size: 72px;
+line-height: 80px;
+}
+
+header h2 span {
+  color: #9b9b9b;
+}
+
+/* ABOUT SECTION */
+
+#about .full-width {
+  padding: 80px 0;
+}
+
+#about h2 {
+  font-family: 'Lora', serif;
+  color: #2b2b2b
+  font-size: 36px;
+  padding-left: 80px;
+}
+
+#about p {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #7f7f7f;
+  font-size: 21px;
+  line-height: 40px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* WORK SECTION */
+
+#work {
+  background: #f9ceb7;
+  text-align: center;
+}
+
+#work .full-width {
+  padding: 115px 0;
+}
+
+#work img {
+  padding-bottom: 30px;
+}
+
+#work h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #2b2b2b;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0 auto;
+}
+
+#work p {
+  font-family: 'Lora', serif;
+  color: #2b2b2b;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0 50px;
+}
+
+#contact {
+  background-color: #ebebeb;
+}
+
+#contact .full-width {
+  padding: 110px 0;
+}
+
+/* Do not understand what is going on below...
+I do not have an ID called contact-img
+The instructions never said create an ID called contact-img
+I do not know what "calling" an ID is
+In general just confused
+
+Figured it out! Had to create a new ID!*/
+
+#contact-img {
+  margin-left: 25px;
+  border: 12px solid #ffffff;
+}
+
+#contact h2, #contact #email-header, #contact #socialmedia-header, #contact ul {
+  padding-left: 115px; /* subcategories for contact section */
+}
+
+#contact #envelope {
+  padding: 0 10px 0 115px;
+}
+
+#contact h2 {
+  font-family: 'Lora', serif;
+  color: #2b2b2b;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+#contact #email-header {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #2b2b2b;
+  font-size: 32px;
+  font-weight: normal; /* Did not see this in annotated guide */
+  line-height: 44px;
+  margin: -30px 0 5px 0; /* Did not see this in annotated guide */
+}
+
+#contact #socialmedia-header {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #2b2b2b;
+  font-size: 28px;
+  font-weight: bold; /* Didn't see this in the guide...where did it come from? */
+  margin: 40px 0 0 0; /* Didn't see this in the guide...where did it come from? */
+}
+
+#contact a {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #c49075;
+  font-size: 28px;
+}
+
+#contact ul {
+  list-style: none;
+}
+
+#contact ul li {
+  display: inline-block;
+}
+
+#contact ul img {
+  font-size: 32px;
+  padding-right: 48px;
+}
+
+/* end of major terminology confusion */
+
+/* GENERAL NOTES AND QUESTIONS
+
+About padding: padding measures the distance from the edge of the CSS box in
+Margin measures the distance from to the edge of the box out
+
+*****THE HEADER SECCTION*****
+
+About the link...when I built this, I completely blanked on the CSS for putting
+links into images...didn't remember it at all. But I figured it out.
+
+Plus, that's what this comment section at the bottom is for anyway.
+
+So the syntax for this is simple...just remember the command line
+This page lives at skillcrush-101-project/index.html
+BUT in the same directory as index.html are the css and img subfolders
+So you have to tell the CSS document how to "get to" the image file used as
+the background based on where the CSS file currently lives
+So...from where the CSS file directory is, go back one (..) then forward to
+the img folder, then forwar again to the hero.png image
+
+The padding syntax (short version) Goes like this...
+padding: top right bottom left;
+
+****** SMALL COSMETIC CHANGES ******
+
+*The social media links don't link to anything (intentional)
+*Spacing may be slightly off on the text (is it my monitor?)
+*Spacing might be slightly off on the Jubilee Austen header...
+*Text doesn't wrap on orange part like in the annotated image
+
+*/

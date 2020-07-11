@@ -1,0 +1,168 @@
+<!doctype html>
+
+<!-- NOTE: see long comments and notes at the bottom of the code base -->
+<!-- NOTE: line running along right edge of screen in Atom is "wrap guide" -->
+<!-- NOTE: some small tweaks from original Skillcrush base code. See bottom. -->
+
+<html lang="en">
+<head>
+  <!-- CSS link always goes in the head tag-->
+  <title>Jubilee Austen | Portfolio</title>
+  <!-- CSS stylesheet links are below -->
+  <link rel="stylesheet" href="css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+
+<!-- Google Fonts link for Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Google Fonts link for Lora -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- I thought I linked to the bold version of Lora in the link above, but here
+it is again anyway -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+
+<!-- custom meta tags not part of Skillcrush base code below -->
+<meta charset="utf-8">
+<meta name="author" content="Jubilee Austen">
+<meta name="description" content="Freelance Developer Jubilee Austen">
+<!-- end of custom meta tags; these tags are for character encoding -->
+</head>
+
+<!-- ******** Head ^ Body v ******** -->
+
+<body>
+  <header>
+  <div class="full-width"> <!-- explanation of these tags at bottom -->
+  <div class="half-width">
+    <h1>Jubilee Austen</h1>
+  </div> <!-- closing tag for half-width class 1 -->
+  <div class="half-width">
+  <nav> <!-- nav bar goes here b/c this will be floated left -->
+    <ul> <!-- links below in nav bar tied to section IDs -->
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav> <!-- closing tag for nav bar -->
+  </div> <!-- closing tag for half-width class 2 -->
+    <h2><span>Hi,</span> I'm a developer that loves clean &amp; elegant code</h2>
+  </div> <!-- Closing tag for the full-width div -->
+  </header>
+  <main>
+  <section id="about"> <!-- divs have same strucure as header above -->
+    <div class="full-width">
+      <h2>A little bit about me.</h2>
+    <div class="half-width">
+      <p>I've made my home base in Providence, Rhode Island, with my small
+        growing family. My journey into tech started with a degree in
+        journalism. As I started sharing my writing online, I was fascinated
+        with how easily I could get my voice out there. I was hooked and
+        wanted to learn how to build my own site to fit my own specific needs
+      </p> <!-- closing p tag -->
+      </div> <!-- half width 1 closing -->
+  <div class="half-width">
+    <p>That curiosity opened a door that could never be shut. When I learned how
+      to build my first website I realized I had found something that gave me
+      the freedom & versatility I was looking for in my work. Now I've made a
+      full switch to front-end development, where I can use my organization
+      skills and eye for detail to write clean, elegant code</p>
+  </div> <!-- half width 2 closing -->
+</div> <!-- closing tag for full width for about ID -->
+  </section>
+  <section id="work">
+    <div class="full-width">
+      <div class="third-width">
+        <img src="img/icon-html.png" alt="HTML icon" /> <!--internal link -->
+        <h3>Hand-Coded HTML</h3>
+        <p>My focus is writing clean, well-formatted, semantic HTML 5 by hand
+          to make sure that the content is easy to read, accessible, easy to
+          collaborate on, and easy to troubleshoot.</p>
+      </div> <!-- closing third width 1 -->
+      <div class="third-width">
+        <img src="img/icon-css.png" alt="CSS icon" />
+        <h3>Well-Organized CSS</h3>
+        <p>I pride myself on writing CSS that is easy to read and build on. I
+          focus on keeping my CSS lean and fast to load, and I make it a habit
+          to stay up-to-date on current best practices.</p>
+      </div> <!-- closing third width 2 -->
+      <div class="third-width">
+        <img src="img/icon-pencil.png" alt="Pencil" />
+        <h3>Ease Converting Designs Into Code</h3>
+        <p>You can trust me to take a designer's PSD and quickly and accurately
+          convert it into a webpage that is a pixel-perfect match.</p>
+      </div> <!-- closing third width 3 -->
+    </div> <!-- closing full width for work ID -->
+  </section>
+  <footer id="contact">
+    <div class="full-width">
+    <div class="half-width" id="left"> <!-- float this left!-->
+      <img id="contact-img" src="img/contact.png" alt="Contact" />
+    </div> <!-- closing half width 1 -->
+    <div class="half-width" id="right">
+    <h2>Like what you see?</h2>
+    <h3 id="email-header">Let's meet for a cup of coffee</h3>
+    <a href="mailto:hi@jubileeausten.com"><img id="envelope" src="img/icon-envelope.png" alt="Mail" /> </a>
+    <a href="mailto:hi@jubileeausten.com">hi [@] jubileeausten.com</a>
+    <h4 id="socialmedia-header">Or, find me on the interwebs</h4>
+    <ul> <!-- opening tag for unordered list -->
+      <!-- NOTE: Not including links to social media per instructions -->
+    <li><img src="img/icon-twitter.png" alt="Twitter" /></li>
+    <li><img src="img/icon-tumblr.png" alt="Tumblr" /></li>
+    <li><img src="img/icon-instagram.png" alt="Instagram" /></li>
+    <li><img src="img/icon-linkedin.png" alt="LinkedIn" /></li>
+    <li><img src="img/icon-github.png" alt="GitHub" /></li>
+    </ul> <!-- closing tag for unordered list -->
+    </div> <!-- closing half width 2 -->
+  </div> <!-- closing full width for Contact ID -->
+  </footer>
+  </main>
+</body>
+</html>
+
+<!-- ***** General comments and notes *****
+
+Q: Differences from original base code
+*Meta tags at the top (just for practice)
+*Social media contacts at the bottom do not have links, icons only
+
+Q: What is going on in the body tag below with all the divs?
+
+The sections and divs within the section are being used to "build" the
+HTML and CSS "box" that was talked about in the lessons. That is why
+There are multiple sections called work, about, etc and why there are
+full-width, half-width, third-width divs inside of those sections
+
+The section and div tags are for base strucure only, you cannot see them
+unless there is content inside them. The structure will become obvious
+later once content is added.
+
+The first thing you want to do when building a page is build the non-visible
+structure first (i.e. sections and divs) and add the content second
+
+Q: What is going on with the nav bar?
+
+The links in the nav bar are linked to the section IDs on the rest of the page.
+The links are actually internal, and once the page is up and running clicking
+on one of those links will take you to where that section starts...which I
+identified in the base code of the page by using the <section> tag
+
+Q: Getting confused about the left-floated div in the instructions. My first
+thought was that you had to use CSS to float somethign left and if there is a
+way to do it in HTML, I can't remmeber how to do it. Section at issue is the
+"contact" section. Posted the question on Slack for help. A: Yes, it involves
+CSS...I just haven't gotten to that section yet!
+
+Quick Time Log (just for fun)
+
+Started coding HTML: approx. 6-3/6-4 2020
+Finished coding HTML: 6-6-2020
+HTML code check done: 6-11-2020
+Fixed: kept putting /a> closing tag on img tags...img tags close with />
+Started cleaning up HTML to make it look better: 6-18-20
+Project went live on the Internet: 6-21-20
+
+Started coding CSS: 6-7-2020
+Finished coding CSS: 6-11-2020 (with no code check)
+
+-->
